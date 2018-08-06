@@ -1,0 +1,64 @@
+<!Doctype Html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Week 1</title>
+    </head>
+    
+<body>
+        
+</body>
+        
+        <script type="text/javascript">
+            
+            var a = "string";
+            var b = 10;
+            var c = true;
+            
+            console.log(typeof a)
+            console.log(typeof b)
+            console.log(typeof c)
+            
+            console.log("15 + 30" + " = " + add(15,30))
+            function add(a,b)
+            {
+                
+                return a + b;
+                
+            }
+            
+            
+            var ar = new Array();
+            
+            for(i = 0; i < 100; i++)
+            {
+                ar[i] = 
+                {
+                    index: i + 1
+                }
+                
+                
+                if(ar[i].index % 3 === 0 && ar[i].index % 2 === 0)
+                {
+                    ar[i].label = "fizz buzz"
+                }
+                 
+                else if(ar[i].index % 2 === 0)
+                {
+                    ar[i].label = "fizz"
+                }
+            
+                else if(ar[i].index % 3 === 0)
+                {   
+                    ar[i].label = "buzz"
+                }
+            }
+            
+            
+            
+            console.log(ar);
+            
+        </script>
+</html>
