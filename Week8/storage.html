@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 7 Notes (storage)</title>
+</head>
+<body>
+    
+    <form id = "form">
+        <input type="text">
+        <input type="button" value = "save">
+        <input type="button" value = "delete">
+    </form>
+    
+    <div id = "result">
+        
+        <script type="text/javascript">
+        
+        if(typeof(Storage)!=="undefined")
+        {
+            var input = document.querySelector("#form input[type='text']");
+            var sav = document.querySelector("#form input[value='save']");
+            var del = document.querySelector("#form input[value='delete']");
+            var results = document.querySelector("#result");
+        
+            if(localStorage.getItem('name')!== undefined)
+            {
+                results.innerHTML = localStorage.getItem('name');
+            }
+            
+            sav.addEventListener("click", savedata);
+            function savedata(e)
+            {
+                localStorage.setItem('name',input.value);
+            }
+            
+            del.addEventListener("click", deldata);
+            function deldata(e)
+            {
+                localStorage.removeItem('name');
+            }
+        }
+        
+        else
+        {
+            alert("Your Browser is Old!")
+        }
+        
+        </script>
+    </div>
+     
+</body>
+</html>
